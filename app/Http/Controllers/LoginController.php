@@ -27,7 +27,7 @@ class LoginController extends Controller
         $credentials = $request->only(['nickname', 'password']);
 
         if (!Auth::attempt($credentials)) {
-            return response()->json(['mensaje' => 'Usuario o conttraseña incorrecto'], 401);
+            return response()->json(['mensaje' => 'Usuario o contraseña incorrecto'], 401);
         }
 
         $user = Auth::user();
@@ -73,7 +73,7 @@ class LoginController extends Controller
                 //return response()->json(['mensaje' => $validator->errors()],401);
                 return response()->json(['mensaje' => 'El usuario ya esta siendo utilizado, por favor cambielo.'],401);
             }
-            
+
             //return response()->json(['mensaje' => $validator->errors()],401);
             return response()->json(['mensaje' => 'La información proporcionada es incorrecta'],401);
         }
@@ -140,7 +140,7 @@ class LoginController extends Controller
         }else{
             return response()->json(['mensaje' => 'Correo invalido'],401);
         }
-        
+
     }
 
      public function changed(Request $request)
@@ -154,9 +154,10 @@ class LoginController extends Controller
             return response()->json(['mensaje' => 'Contraseña requerida'],401);
         }
         $validatedData=$request->all();
-        $user=auth()->user()->id;
-        $user->password=$validatedData['password'];
-        if ($user->save) {
+        $user=auth()->user();
+        $user->password=Hash::make($request->password);
+        $user->remember_token=0;
+        if ($user->save()) {
              return response()->json(['mensaje'=>'Contraseña actualizada']);
         }
         return response()->json(['mensaje' => 'Error al actualizar contraseña'],401);

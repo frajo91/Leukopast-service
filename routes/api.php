@@ -19,5 +19,5 @@ Route::get('/miavance', [LoginController::class, 'getid'])->middleware('auth:san
 Route::post('/progreso', [RegistroController::class, 'post'])->middleware('auth:sanctum');
 Route::get('/miprogreso', [RegistroController::class, 'getprogresobyid'])->middleware('auth:sanctum');
 Route::post('/restablecer', [LoginController::class, 'recuperar']);
-Route::post('/update', [LoginController::class, 'changed']);
+Route::post('/update', [LoginController::class, 'changed'])->middleware('auth:sanctum');
 Route::get('/certificado/{id}',[RegistroController::class,'EnviarCertificado']);
