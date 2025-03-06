@@ -60,7 +60,7 @@ class RegistroController extends Controller
                     $this->EnviarCertificado(auth()->user()->id);
                 }
             }
-            
+
             return response()->json(['mensaje' => 'Progreso registrado']);
         }
         return response()->json(['mensaje' => 'Error al guardar el progreso'],400);
@@ -87,6 +87,6 @@ class RegistroController extends Controller
         return response()->json(['mensaje' => 'Correo enviado']);
         /*$pdf = Pdf::loadView('certificado', ['usuario' => 'Fraiber Pabon'])->setPaper('11x17', 'landscape');
         return $pdf->stream();*/
-        
+
     }
 }

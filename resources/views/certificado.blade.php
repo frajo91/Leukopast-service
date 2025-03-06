@@ -57,7 +57,7 @@
                             <img src="{{ public_path('logo.png') }}" style="height:3cm;">
                             <!--<img src="{{ asset('logo.png') }}"> -->
                         </center>
-                
+
                     </td>
                 </tr>
                 <tr>
@@ -65,7 +65,7 @@
                         <center>
                             <h1 style="font-weight: lighter; font-size:60px; ">Certifica que:</h1>
                         </center>
-                        
+
                     </td>
                 </tr>
                <tr>
@@ -73,7 +73,7 @@
                         <center>
                             <h1 style="font-size: 80px; text-transform: uppercase;line-height: 60px; font-family:'Neo Sans bold' !important ;margin-top: 16px;">{{$usuario}}</h1>
                         </center>
-                        
+
                     </td>
                 </tr>
                <tr>
@@ -82,7 +82,7 @@
                             <h2 style="font-weight: lighter; font-size:40px;">Finalizó exitosamente el e-learning</h2>
                             <h2 style="font-weight: normal; line-height: 16px; font-family:'Neo Sans Pro' !important; font-size:40px;">Educación sobre el cuidado de heridas en las farmacias</h2>
                         </center>
-                        
+
                     </td>
                 </tr>
                 <tr>
@@ -90,7 +90,7 @@
                         <center>
                             <p style="font-weight: normal;font-family:'Neo Sans Pro' !important; padding-right: 80px;  padding-left: 80px; font-size: 18px;">Este logro demuestra su compromiso y la dedicación en el desarrollo de sus conocimientos y habilidades en el manejo adecuado de heridas en un entorno de cuidado en casa, mejorando así su capacidad para ofrecer una atención de calidad a sus clientes.</p>
                         </center>
-                        
+
                     </td>
                 </tr>
                 <tr>
@@ -105,4 +105,3 @@
 
 </table>
 <img style="width:100%; position: fixed; bottom: 50px;" src="{{ public_path('linea.png') }}">
-
