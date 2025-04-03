@@ -115,7 +115,7 @@ class LoginController extends Controller
     public function get(Request $request)
     {
         $user=auth()->user()->id;
-        $registro=User::with('registro')->get();
+        $registro=User::with('registro')->where('ISADMIN',0)->get();
         return response()->json(['datos'=>UserResource::collection(($registro))]);
     }
 

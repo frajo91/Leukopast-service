@@ -80,7 +80,7 @@
                     <td style="height:4cm">
                         <center>
                             <h2 style="font-weight: lighter; font-size:40px;">Finalizó exitosamente el e-learning</h2>
-                            <h2 style="font-weight: normal; line-height: 16px; font-family:'Neo Sans Pro' !important; font-size:40px;">Educación sobre el cuidado de heridas en las farmacias</h2>
+                            <h2 style="font-weight: normal; line-height: 16px; font-family:'Neo Sans Pro' !important; font-size:40px;">Introducción a MARSI</h2>
                         </center>
 
                     </td>

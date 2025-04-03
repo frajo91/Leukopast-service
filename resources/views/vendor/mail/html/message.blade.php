@@ -2,7 +2,7 @@
 {{-- Header --}}
 <x-slot:header>
 <x-mail::header :url="config('app.url')">
-            Educación sobre el cuidado de heridas en las farmacias
+            Introducción a MARSI
 </x-mail::header>
 </x-slot:header>
 
