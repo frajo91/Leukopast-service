@@ -30,11 +30,11 @@ class RegistroResource extends JsonResource
                     'CORREO' => $this->usuario->email,
                     'TELEFONO' => $this->usuario->phone,
                     'PAIS' => $this->usuario->country,
-                    'CIUDAD' => $this->usuario->city,   
+                    'CIUDAD' => $this->usuario->city,
                     'FECHA' => $this->updated_at,
                     'PORCENTAJE_CURSO' => ($hayavance) ? $progreso['p']: 0 ,
-                    'PORCENTAJE_PRUEBA' => ($hayavance) ? (isset($lessons['5']['s']))?$lessons['5']['s']: 0 : 0,
-                    'ESTADO_PRUEBA' => ($hayavance) ? (isset($lessons['5']['s']))?($lessons['5']['s']>=$lessons['5']['ps'])?'Aprobada':'Reprobada': 'No registra' : 'No registra',
+                    'PORCENTAJE_PRUEBA' => ($hayavance) ? (isset($lessons['4']['s']))?$lessons['5']['s']: 0 : 0,
+                    'ESTADO_PRUEBA' => ($hayavance) ? (isset($lessons['4']['s']))?($lessons['5']['s']>=$lessons['4']['ps'])?'Aprobada':'Reprobada': 'No registra' : 'No registra',
                     'MODULOS' => ($hayavance) ? $lessons->keys()->map(function (int $item, int $key) {
                             return $item +1;
                         }): [] ,

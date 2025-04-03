@@ -2,7 +2,7 @@
 {{-- Header --}}
 <x-slot:header>
 <x-mail::header :url="config('app.url')">
-            Prevención y tratamiento de MARSI
+            Introducción a MARSI
 </x-mail::header>
 </x-slot:header>
 
