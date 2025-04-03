@@ -1,10 +1,10 @@
-<!--<link rel="stylesheet" href="{{ asset('css/certificado.css') }}">-->
+<!--<link rel="stylesheet" href="{{ public_path('css/certificado.css') }}">-->
 <style type="text/css">
     @font-face {
-    font-family: 'Neo Sans Pro';
+    font-family: 'HelveticaNeue';
     font-style: normal;
     font-weight: normal;
-    src: url("{{ public_path('css/Neo Sans Std Regular.otf') }}") format('truetype');
+    src: url("{{ public_path('css/HelveticaNeueLTStd-Lt.otf') }}") format('truetype');
 }
 
     @font-face {
@@ -15,15 +15,23 @@
 }
 
     @font-face {
-    font-family: 'Neo Sans light';
+    font-family: 'HelveticaNeueLTStd-Md';
     font-style: normal;
-    font-weight: lighter;
-    src: url("{{ public_path('css/Neo Sans Std Bold_0.otf') }}") format('truetype');
+    font-weight: normal;
+    src: url("{{ public_path('css/HelveticaNeueLTStd-Md.otf') }}") format('truetype');
+}
+
+    @font-face {
+    font-family: 'HelveticaNeue roman';
+    font-style: normal;
+    font-weight: normal;
+    src: url("{{ public_path('css/HelveticaNeueLTStd-Roman.otf') }}") format('truetype');
+}
+
 }
 
     html{
-          font-family:'Neo Sans light' !important ;
-          color: #50707aff;
+          font-family:'HelveticaNeue' !important ;
         }
 
     @page{
@@ -36,8 +44,8 @@
 
 
     .image{
-        background-image:url("{{ public_path('image.jpg') }}") ;
-        background-size: cover;
+        background-image:url("{{ public_path  ('imgCertificado1.jpg') }}") ;
+        background-size:cover;
         background-repeat: no-repeat;
         box-shadow: 10px 5px 5px black;
     }
@@ -47,15 +55,15 @@
     <tr >
         <td  style="width: 25%; padding: 0px; height: 99%;" class="image">
             <!--<img style="width:auto; height:stretch; padding: 0px; margin: 0px" src="{{ public_path('image.png') }}">-->
-            <!--<img src="{{ asset('image.png') }}"> -->
+            <!--<img src="{{ public_path('image.png') }}"> -->
         </td>
         <td >
             <table style="height: 98%;">
                 <tr>
                     <td style="border-bottom: 2px solid red; height: 7cm;">
                         <center>
-                            <img src="{{ public_path('logo.png') }}" style="height:3cm;">
-                            <!--<img src="{{ asset('logo.png') }}"> -->
+                            <img src="{{ public_path('logo.png') }}" style="max-height:3cm;">
+                            <!--<img src="{{ public_path('logo.png') }}"> -->
                         </center>
 
                     </td>
@@ -63,7 +71,7 @@
                 <tr>
                     <td style="height:3cm;">
                         <center>
-                            <h1 style="font-weight: lighter; font-size:60px; ">Certifica que:</h1>
+                            <h1 style="font-weight: lighter; font-size:60px; font-family:'HelveticaNeue roman'  ">Certifica que:</h1>
                         </center>
 
                     </td>
@@ -71,7 +79,7 @@
                <tr>
                     <td style="height: 4cm;">
                         <center>
-                            <h1 style="font-size: 80px; text-transform: uppercase;line-height: 60px; font-family:'Neo Sans bold' !important ;margin-top: 16px;">{{$usuario}}</h1>
+                            <h1 style="font-weight: lighter; font-size: 80px; text-transform: uppercase;line-height: 60px; font-family:'HelveticaNeueLTStd-Md' !important ;margin-top: 16px;">{{$usuario}}</h1>
                         </center>
 
                     </td>
@@ -79,8 +87,8 @@
                <tr>
                     <td style="height:4cm">
                         <center>
-                            <h2 style="font-weight: lighter; font-size:40px;">Finalizó exitosamente el e-learning</h2>
-                            <h2 style="font-weight: normal; line-height: 16px; font-family:'Neo Sans Pro' !important; font-size:40px;">Introducción a MARSI</h2>
+                            <h2 style="font-weight: lighter; font-size:40px; font-family:'HelveticaNeue' !important ;">Finalizó exitosamente el e-learning</h2>
+                            <h1 style="font-weight: lighter; line-height: 16px;font-family:'HelveticaNeueLTStd-Md' !important ; font-size:40px;">{{env('APP_NAME')}}</h1>
                         </center>
 
                     </td>
@@ -88,7 +96,7 @@
                 <tr>
                     <td style="height:auto;">
                         <center>
-                            <p style="font-weight: normal;font-family:'Neo Sans Pro' !important; padding-right: 80px;  padding-left: 80px; font-size: 18px;">Este logro demuestra su compromiso y la dedicación en el desarrollo de sus conocimientos y habilidades en el manejo adecuado de heridas en un entorno de cuidado en casa, mejorando así su capacidad para ofrecer una atención de calidad a sus clientes.</p>
+                            <p style="font-weight: normal; padding-right: 80px;  padding-left: 80px; font-size: 18px;">Este logro demuestra su compromiso y la dedicación en el desarrollo de sus conocimientos y habilidades en el manejo adecuado de heridas en un entorno de cuidado en casa, mejorando así su capacidad para ofrecer una atención de calidad a sus clientes.</p>
                         </center>
 
                     </td>

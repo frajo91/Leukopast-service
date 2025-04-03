@@ -1,12 +1,17 @@
 {
-    "neo sans pro": {
-        "normal": "neo_sans_pro_normal_689a729814dbe341c06a5f4482493737"
+    "helveticaneue": {
+        "normal": "helveticaneue_normal_19b4b4650bed0696b2c92512e85319c1"
     },
     "neo sans bold": {
-        "normal": "\/home\/fraiberp\/Documentos\/Documentos\/Trabajos\/traduccion 3.0\/Leukopast-service\/storage\/fonts\/neo_sans_bold_normal_420810e5cf65ee7f1927263d9d1a464c",
         "bold": "neo_sans_bold_bold_a22e11bbbbb566a1792b6144d9b4176a"
     },
-    "neo sans light": {
-        "normal": "neo_sans_light_normal_fe9eef6bf3a7ddef28da44bf1bd0876f"
+    "helveticaneue medium": {
+        "normal": "helveticaneue_medium_normal_9d6c8710a380b7b8abb371cf857b1717"
+    },
+    "helveticaneue roman": {
+        "normal": "helveticaneue_roman_normal_7fbb8acce7f20453e97ba887b03cd770"
+    },
+    "helveticaneueltstd-md": {
+        "normal": "helveticaneueltstd_md_normal_9d6c8710a380b7b8abb371cf857b1717"
     }
 }

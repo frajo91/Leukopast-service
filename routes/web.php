@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get("/", function () {
+    return view("welcome");
 });
-Route::get('/certificado', function () {
-    return view('certificado');
+Route::get("/certificado", function () {
+    return view("certificado", ["usuario" => "John Doe"]);
 });
