@@ -33,7 +33,7 @@ class RegistroController extends Controller
             'progreso' => 'required'
         ]);
         if ($validator->fails()) {
-            return response()->json(['mensaje' => 'No hay registros del progreso'],400);
+            return response()->json(['mensaje' => __('messages.sin-progreso')],400);
         }
 
         //validamos si existe un registro de progreso previo
@@ -61,9 +61,9 @@ class RegistroController extends Controller
                 }
             }
 
-            return response()->json(['mensaje' => 'Progreso registrado']);
+            return response()->json(['mensaje' => __('messages.progreso_registrado')]);
         }
-        return response()->json(['mensaje' => 'Error al guardar el progreso'],400);
+        return response()->json(['mensaje' => __('messages.progreso_error')],400);
     }
 
      public function getprogresobyid(Request $request)
@@ -84,7 +84,7 @@ class RegistroController extends Controller
         $score=registro::where('user_id',$user->id)->first();
         $score->enviado=true;
         $score->save();
-        return response()->json(['mensaje' => 'Correo enviado']);
+        return response()->json(['mensaje' => __('messages.correo_enviado')]);
         /*$pdf = Pdf::loadView('certificado', ['usuario' => 'Fraiber Pabon'])->setPaper('11x17', 'landscape');
         return $pdf->stream();*/
 

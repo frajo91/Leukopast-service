@@ -1,10 +1,10 @@
 <x-mail::message>
-# ¡Felicidades, {{$usuario}}!
+# {{__('messages.mail_certificado_felicidades',['usuario'=>$usuario])}}
 
-Has completado con éxito nuestro curso.
-Te enviamos adjunto el certificado de aprobación.
+{{__('messages.mail_certificado_curso_completado')}}
+{{__('messages.mail_certificado_certificado_enviado')}}
 
-Gracias por participar.
+{{__('messages.mail_certificado_agradecimiento')}}
 
 [Leukoplast](http://leukoplastfarmacias.com/)
 

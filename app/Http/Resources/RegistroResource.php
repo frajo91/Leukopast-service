@@ -43,10 +43,10 @@ class RegistroResource extends JsonResource
             "ESTADO_PRUEBA" => $hayavance
                 ? (isset($lessons["4"]["s"])
                     ? ($lessons["4"]["s"] >= $lessons["4"]["ps"]
-                        ? "Aprobada"
-                        : "Reprobada")
-                    : "No registra")
-                : "No registra",
+                        ? __('messages.aprobado')
+                        : __('messages.reprobado'))
+                    : __('messages.no_registra'))
+                :  __('messages.no_registra'),
             "MODULOS" => $hayavance
                 ? $lessons->keys()->map(function (int $item, int $key) {
                     return $item + 1;

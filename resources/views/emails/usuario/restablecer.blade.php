@@ -1,23 +1,20 @@
 <x-mail::message>
-## ¿Ha olvidado su contraseña?
+## {{__('messages.mail_contrasena_titulo')}}
 
-## No se preocupe, aquí está nuevamente.
+## {{__('messages.mail_contrasena_titulo_2')}}
 
 
-Hemos recibido una solicitud de recuperación de contraseña de la cuenta del nombre de usuario {{$correo}}. La contraseña registrada es:
+{{__('messages.mail_contrasena_cuerpo_1',['correo'=>$correo])}}
 
 <x-mail::panel color="danger">
 # {{$contraseña}}
 </x-mail::panel>
 
-Para volver a ingresar [haga clic aquí.](http://leukoplastfarmacias.com/) Si no quiere recuperar su contraseña,
-
-puede ignorar este correo electrónico.
+{{__('messages.mail_contrasena_cuerpo_2')}}
 
 
-Si no solicito esta recuperación de contraseña, le sugerimos informar al email
+{{__('messages.mail_contrasena_cuerpo_3')}}
 
-[soporte@leukoplastfarmacias.com](mailto:soporte@leukoplastfarmacias.com) para gestionar la seguridad de su cuenta.
 </x-mail::message>
 
 

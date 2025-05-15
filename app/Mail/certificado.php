@@ -32,7 +32,7 @@ class certificado extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Certificado',
+            subject: __('messages.asunto_certificado'),
         );
     }
 

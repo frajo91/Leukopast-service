@@ -21,13 +21,13 @@ class LoginController extends Controller
             'password' => 'required|string'
         ]);
         if ($validator->fails()) {
-            return response()->json(['mensaje' => 'Información insuficiente'],401);
+            return response()->json(['mensaje' => __('messages.información_insufucuente')],401);
         }
 
         $credentials = $request->only(['nickname', 'password']);
 
         if (!Auth::attempt($credentials)) {
-            return response()->json(['mensaje' => 'Usuario o contraseña incorrecto'], 401);
+            return response()->json(['mensaje' => __('messages.login_incorrecto')], 401);
         }
 
         $user = Auth::user();
@@ -67,15 +67,15 @@ class LoginController extends Controller
 
         if ($validator->fails()) {
             if ($validator->errors()->has('email')) {
-                return response()->json(['mensaje' => 'Ya hay un usuario registrado con este correo.'],401);
+                return response()->json(['mensaje' => __('messages.correo_existente')],401);
             }
             if ($validator->errors()->has('nickname')) {
                 //return response()->json(['mensaje' => $validator->errors()],401);
-                return response()->json(['mensaje' => 'El usuario ya esta siendo utilizado, por favor cambielo.'],401);
+                return response()->json(['mensaje' => __('messages.usuario_existente')],401);
             }
 
             //return response()->json(['mensaje' => $validator->errors()],401);
-            return response()->json(['mensaje' => 'La información proporcionada es incorrecta'],401);
+            return response()->json(['mensaje' => __('messages.informacion_invalida')],401);
         }
 
         $validatedData=$request->all();
@@ -124,7 +124,7 @@ class LoginController extends Controller
             'correo' => 'required|email',
         ]);
          if ($validator->fails()) {
-            return response()->json(['mensaje' => 'Correo invalido'],401);
+            return response()->json(['mensaje' => __('messages.correo_invalido')],401);
         }
         $validatedData=$request->all();
 
@@ -136,9 +136,9 @@ class LoginController extends Controller
             $registro->remember_token=1;
             $registro->save();
             Mail::to($validatedData['correo'])->send(new Restablecer($registro->nickname,$new_password));
-            return response()->json(['mensaje' => 'Correo enviado']);
+            return response()->json(['mensaje' => __('messages.correo_enviado')]);
         }else{
-            return response()->json(['mensaje' => 'Correo invalido'],401);
+            return response()->json(['mensaje' => __('messages.correo_invalido')],401);
         }
 
     }
@@ -151,15 +151,15 @@ class LoginController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['mensaje' => 'Contraseña requerida'],401);
+            return response()->json(['mensaje' =>  __('messages.contrasena_requerida')],401);
         }
         $validatedData=$request->all();
         $user=auth()->user();
         $user->password=Hash::make($request->password);
         $user->remember_token=0;
         if ($user->save()) {
-             return response()->json(['mensaje'=>'Contraseña actualizada']);
+             return response()->json(['mensaje'=> __('messages.contrasena_actualizada')]);
         }
-        return response()->json(['mensaje' => 'Error al actualizar contraseña'],401);
+        return response()->json(['mensaje' =>  __('messages.contrasena_error')],401);
     }
 }

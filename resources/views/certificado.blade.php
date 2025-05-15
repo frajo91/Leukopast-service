@@ -71,7 +71,7 @@
                 <tr>
                     <td style="height:3cm;">
                         <center>
-                            <h1 style="font-weight: lighter; font-size:60px; font-family:'HelveticaNeue roman'  ">Certifica que:</h1>
+                            <h1 style="font-weight: lighter; font-size:60px; font-family:'HelveticaNeue roman'  ">{{__('messages.certificado_certifica'}}</h1>
                         </center>
 
                     </td>
@@ -87,7 +87,7 @@
                <tr>
                     <td style="height:4cm">
                         <center>
-                            <h2 style="font-weight: lighter; font-size:40px; font-family:'HelveticaNeue' !important ;">Finalizó exitosamente el e-learning</h2>
+                            <h2 style="font-weight: lighter; font-size:40px; font-family:'HelveticaNeue' !important ;">{{__('messages.certificado_finalizo')}}</h2>
                             <h1 style="font-weight: lighter; line-height: 16px;font-family:'HelveticaNeueLTStd-Md' !important ; font-size:40px;">{{env('APP_NAME')}}</h1>
                         </center>
 
@@ -96,7 +96,7 @@
                 <tr>
                     <td style="height:auto;">
                         <center>
-                            <p style="font-weight: normal; padding-right: 80px;  padding-left: 80px; font-size: 18px;">Este logro demuestra su compromiso y la dedicación en el desarrollo de sus conocimientos y habilidades en el manejo adecuado de heridas en un entorno de cuidado en casa, mejorando así su capacidad para ofrecer una atención de calidad a sus clientes.</p>
+                            <p style="font-weight: normal; padding-right: 80px;  padding-left: 80px; font-size: 18px;">{{__('messages.certificado_mensaje')}}</p>
                         </center>
 
                     </td>

@@ -29,7 +29,7 @@ class Restablecer extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Restablecer',
+            subject: __('messages.asunto_restablecer'),
         );
     }
 

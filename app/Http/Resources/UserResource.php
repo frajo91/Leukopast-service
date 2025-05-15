@@ -35,7 +35,7 @@ class UserResource extends JsonResource
                     'FECHA' => $this->updated_at,
                     'PORCENTAJE_CURSO' => ($hayavance) ? $progreso['p']: 0 ,
                     'PORCENTAJE_PRUEBA' => ($hayavance) ? (isset($lessons['4']['s']))?$lessons['4']['s']: 0 : 0,
-                    'ESTADO_PRUEBA' => ($hayavance) ? (isset($lessons['4']['s']))?($lessons['4']['s']>=$lessons['4']['ps'])?'Aprobada':'Reprobada': 'No registra' : 'No registra',
+                    'ESTADO_PRUEBA' => ($hayavance) ? (isset($lessons['4']['s']))?($lessons['4']['s']>=$lessons['4']['ps'])?__('messages.aprobado'):__('messages.reprobado'): __('messages.no_registra') : __('messages.no_registra'),
                     'MODULOS' => ($hayavance) ? $lessons->keys()->map(function (int $item, int $key) {
                             return $item +1;
                         }): [] ,

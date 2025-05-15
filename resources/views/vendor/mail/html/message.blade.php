@@ -2,7 +2,7 @@
 {{-- Header --}}
 <x-slot:header>
 <x-mail::header :url="config('app.url')">
-            Introducción a MARSI
+            {{config('app.name')}}
 </x-mail::header>
 </x-slot:header>
 
